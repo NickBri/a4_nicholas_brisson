@@ -1,0 +1,71 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<html>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <body>
+  <div class="container">
+  <form #todoForm= "ngForm" (ngSubmit)="todoSubmit(todoForm.value);
+ todoForm.resetForm()" >
+    <div class="form-group">
+    <h1 class="text-center text-primary">Todo App</h1>
+      <div class="input-group-prepend">
+
+        
+        <input #todo type="text"  class="form-control" placeholder="Add Todo" name="todo" ngModel >
+
+
+        <span class="input-group-text" (click)="addTodo(todo.value); todoForm.resetForm()">
+        <i class="material-icons">add</i>
+        </span>
+
+      </div>
+    </div>
+
+   <div class="data">
+    <ul class="list-instyled">
+    <li *ngFor="let todo of todoArray">
+
+
+    <input style="margin: 20px;"type="checkbox" id="chbox" value="checkbox" ng-model="todo.done"/> <label for="chbox">
+     
+    <p contenteditable="true">{{todo}}</p>  
+
+</label><br>
+[Date Added: {{date   | date: "MM-dd-yyyy"}}]
+ <br>  
+    
+
+    
+    
+    <button><i style= " color: white; text-align: center;" (click)="deleteItem(todo)" class="material-icons">delete</i></button>
+
+    </li>
+
+  </ul>
+</div>
+
+ </form>
+ <!--
+ <div class = "modify">
+<input #todo type="text"  class="modify" placeholder="Modify Item (enter item name)" name="modifyTodo" ngModel >
+
+<input #todo type="text"  class="modify" placeholder="Enter New Value" name="newTodo" ngModel >
+
+ <span class="input-group-text" (click)="modifyTodo(modifyTodo.value, newTodo.value); todoForm.resetForm()">
+        <i class="material-icons">add</i>
+        </span>
+
+  </div>
+-->
+</div>
+</body>
+<p style="color:lavender"> *** To edit a list item simply select remove and replace *** </p>
+</div>
+</html>
+
+
+<router-outlet></router-outlet>

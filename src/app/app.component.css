@@ -1,0 +1,97 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
+
+
+body, html {
+  height: 100%;
+  background-color: black;
+  line-height: 1.8;
+  border-radius: 12px;
+    margin:0;
+    padding-top: 10px;
+}
+body{
+	margin-top: 100px;
+}
+html{
+  padding-top:100px;
+background-image:  url('../assets/img/hero.png');
+padding-bottom: 300px;
+  scroll-behavior: smooth;
+}
+form h1{
+    font-family: "ZCOOL+XiaoWei";
+    color:#F97300; 
+}
+
+h1{
+	text-align: center;
+  color:  #4682B4;
+  margin: 30px;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+p{
+
+	padding-left: 40px;
+	
+}
+button{
+	background-color:black;
+	width:20px;
+	margin-left: 18px;
+	color:white;
+	 display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.container{
+	padding: 50px;
+}
+
+li{
+	border:solid #4682B4;
+	border-radius: 12px;
+color:white;
+margin: 30px;
+}
+
+div.input-group-prepend{
+	 margin: auto;
+  	width: 50%;
+  	position: relative;
+}
+
+div.data{
+	text-align: left;
+	padding-top:60px;
+
+}
+
+ul{
+	margin: auto;
+	width: 50%;
+	position: relative;
+
+}
+
+div.modify{
+margin: auto;
+  	width: 50%;
+  	position: relative;
+}
+
+input[type=checkbox] + label {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 20px;
+} 
+
+input[type=checkbox]:checked + label {
+  color:green;
+  text-decoration: line-through;
+font-size: 20px;
+margin-bottom: -20px;
+}
