@@ -21,6 +21,7 @@ export class AppComponent {
   todoSubmit(value:any){
      if(value!==""){
     this.todoArray.push(value.todo)
+    alert("Item added successfully")
      //this.todoForm.reset()
     }else{
       alert('Field required **')
@@ -38,6 +39,7 @@ export class AppComponent {
    for(let i=0 ;i<= this.todoArray.length ;i++){
     if(todo== this.todoArray[i]){
      this.todoArray.splice(i,1)
+     alert("Item removed successfully")
     }
    }
   }
